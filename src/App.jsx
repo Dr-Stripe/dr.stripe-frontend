@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 
 // Components
-import Thankyou from "./Thankyou";
-import Payment from "./Payment";
-import Docter from "./Docter";
-import Patient from "./Patient";
 
 function App({ setIsDoctor }) {
   return (

@@ -2,6 +2,6 @@
 // It should be default inter face
 import React from "react";
 
-export default function UnpainList({ data }) {
-  return <div></div>;
+export default function UnpainList() {
+  return <div>Unpaid</div>;
 }
