@@ -1,7 +1,7 @@
 import React from "react";
 import PaidList from "./PaidList";
 import Btn from "./Btn";
-import Unpaind from "./UnpaidList";
+import Unpaid from "./UnpaidList";
 
 const data = [
   {
@@ -27,7 +27,7 @@ export default function Patient() {
     <div>
       <h2>Hello{data[0].first_name}</h2>
       <PaidList />
-      <Unpaind />
+      <Unpaid />
       <Btn />
     </div>
   );

@@ -4,11 +4,11 @@ import "./App.css";
 // Components
 import Thankyou from "./Thankyou";
 import Payment from "./Payment";
-import Docter from "./Docter";
+import Doctor from "./Doctor";
 import Patient from "./Patient";
 
 function App() {
-  const [viewDocter, setViewDocter] = useState("Docter");
+  const [viewDoctor, setViewDoctor] = useState("Doctor");
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +17,8 @@ function App() {
           Are you
           <button
             onClick={() => {
-              setViewDocter(true);
+              setViewDoctor(true);
+              console.log('yes')
             }}
           >
             Doctor
@@ -25,7 +26,7 @@ function App() {
           <button>Patient</button>
         </p>
       </header>
-      {viewDocter === "docter" ? <Docter /> : <Patient />}
+      {viewDoctor === "Doctor" ? <Doctor /> : <Patient />}
     </div>
   );
 }
