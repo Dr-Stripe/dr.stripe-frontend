@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Docter from "./Docter";
+import Patient from "./Patient";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+function Greeting() {
+  const [isDoctor, setIsDoctor] = useState("main");
+  if (isDoctor === "Doctor") {
+    return <Docter />;
+  } else if (isDoctor === "Patient") {
+    return <Patient />;
+  } else {
+    return <App setIsDoctor={setIsDoctor} />;
+  }
+}
+
+ReactDOM.render(
+  <Greeting isDoctor={"main"} />,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
