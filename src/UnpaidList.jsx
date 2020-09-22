@@ -7,11 +7,24 @@ import patiants from "./patiants.json";
 
 export default function UnpaidList({ data }) {
 
-  function showUnpaid() {
-    for (const visit of visits) {
-      
-    }
-  }
 
-  return <div></div>;
+  return (
+    <div>
+      {visits.map((visit) => {
+          if (!visit.paid) {
+            return(
+              <>
+               <h4>Date</h4> 
+               <div>{visit.visit_date}</div>
+               <h4>Treatment</h4>
+               <div>{visit.treatment}</div>
+               <h4>Price</h4>
+               <div>{visit.price}</div>
+               <h4>Hospital Name</h4>
+               <div>{visit.hospital_name}</div>
+              </>)
+            }
+      })}
+    </div>
+  )
 }
