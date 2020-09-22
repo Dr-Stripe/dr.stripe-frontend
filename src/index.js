@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Docter from "./Doctor";
+import Doctor from "./Doctor";
 import Patient from "./Patient";
 import * as serviceWorker from "./serviceWorker";
 
