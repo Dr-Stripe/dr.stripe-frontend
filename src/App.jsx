@@ -7,8 +7,7 @@ import Payment from "./Payment";
 import Docter from "./Docter";
 import Patient from "./Patient";
 
-function App() {
-  const [viewDocter, setViewDocter] = useState("Docter");
+function App({ setIsDoctor }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -17,15 +16,20 @@ function App() {
           Are you
           <button
             onClick={() => {
-              setViewDocter(true);
+              setIsDoctor("Doctor");
             }}
           >
             Doctor
           </button>
-          <button>Patient</button>
+          <button
+            onClick={() => {
+              setIsDoctor("Patient");
+            }}
+          >
+            Patient
+          </button>
         </p>
       </header>
-      {viewDocter === "docter" ? <Docter /> : <Patient />}
     </div>
   );
 }
