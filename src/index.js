@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Docter from "./Docter";
+import Doctor from "./Doctor";
 import Patient from "./Patient";
 import * as serviceWorker from "./serviceWorker";
 
 function Greeting() {
   const [isDoctor, setIsDoctor] = useState("main");
   if (isDoctor === "Doctor") {
-    return <Docter />;
+    return <Doctor />;
   } else if (isDoctor === "Patient") {
     return <Patient />;
   } else {
