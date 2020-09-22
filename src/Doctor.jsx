@@ -32,13 +32,3 @@ function changeHandler(e) {
     </form>
   </div>;
 }
-
-
-// [{
-//   "visit_date": "9/14/2020",
-//   "treatment": "Asthma check up - Patient talked about recent trouble breathing.",
-//   "doctor": "Yamamoto",
-//   "paid": true,
-//   "price": "¥1356.00",
-//   "hospital_name": "Tokai University Tokyo Hospital"
-// }
