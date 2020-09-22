@@ -1,10 +1,22 @@
 import React from "react";
 
-export default function Btn() {
+export default function Btn({ setView }) {
   return (
     <div>
-      <button>Paid</button>
-      <button>Unpaid</button>
+      <button
+        onClick={() => {
+          setView(false);
+        }}
+      >
+        Paid
+      </button>
+      <button
+        onClick={() => {
+          setView(true);
+        }}
+      >
+        Unpaid
+      </button>
     </div>
   );
 }

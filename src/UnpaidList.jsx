@@ -4,7 +4,6 @@ import React from "react";
 import visits from "./visits.json";
 import patiants from "./patiants.json";
 
-
 export default function UnpaidList({ data }) {
 
 
