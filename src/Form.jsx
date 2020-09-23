@@ -11,9 +11,9 @@ export default function Form({ setDocview }) {
           // await axios.post(
           //   "./visit",
           //   JSON.stringify({
-          //     visit_date: e.target.visit.value,
+
           //     treatment: e.target.treatment.value,
-          //     symptom: "insert symptom value",
+          //     symptoms: "insert symptom value",
           //     doctor: e.target.doctor.value,
           //     paid: false,
           //     price: e.target.price.value,
@@ -23,7 +23,7 @@ export default function Form({ setDocview }) {
           console.log({
             visit_date: e.target.visit.value,
             treatment: e.target.treatment.value,
-            symptom: "insert symptom value",
+            symptoms: "insert symptom value",
             doctor: e.target.doctor.value,
             paid: e.target.paid.value,
             // price: e.target.price.value,
