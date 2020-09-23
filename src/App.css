@@ -18,3 +18,28 @@
 .paiedList {
   border: 1px solid gray;
 }
+
+body {
+  background: #ffb4b4;
+  font-family: "Baloo Tammudu 2", cursive;
+  /* display: flex; */
+  /* text-align: center; */
+  /* justify-content: center; */
+}
+
+.welcome {
+  color: white;
+}
+
+.btn_container {
+  display: flex;
+}
+
+.btnPatient,
+.btnDoctor {
+  font-family: "Baloo Tammudu 2", cursive;
+  padding: 30px;
+  color: white;
+  background: #2a566b;
+  border-radius: 4px;
+}

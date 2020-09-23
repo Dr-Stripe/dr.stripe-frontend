@@ -1,9 +1,10 @@
 // This is Paid components
 import React from "react";
 import Data from "./visits.json";
+import Btn from "./Btn";
 import "./App.css";
 
-export default function PaindList() {
+export default function PaindList({ setView }) {
   return (
     <div>
       {Data.map((ele) => {
@@ -24,6 +25,7 @@ export default function PaindList() {
           );
         }
       })}
+      <Btn setView={setView} />
     </div>
   );
 }
