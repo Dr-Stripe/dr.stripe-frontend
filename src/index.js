@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -6,12 +6,25 @@ import Doctor from "./Doctor";
 import Patient from "./Patient";
 import * as serviceWorker from "./serviceWorker";
 
+const axios = require("axios");
+
 function Greeting() {
+  const [Data, setData] = useState();
+  useEffect(() => {
+    async function getData() {
+      let visitsData = await axios.get(
+        "https://cc14doctorstripe-app.herokuapp.com/payments"
+      );
+      setData(visitsData.data);
+      console.log(visitsData.data);
+    }
+    getData();
+  }, []);
   const [isDoctor, setIsDoctor] = useState("main");
   if (isDoctor === "Doctor") {
     return <Doctor />;
   } else if (isDoctor === "Patient") {
-    return <Patient />;
+    return <Patient data={Data} />;
   } else {
     return <App setIsDoctor={setIsDoctor} />;
   }

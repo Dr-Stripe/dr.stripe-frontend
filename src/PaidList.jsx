@@ -1,13 +1,13 @@
 // This is Paid components
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Data from "./visits.json";
 import Btn from "./Btn";
 import "./App.css";
 
-export default function PaindList({ setView }) {
+export default function PaindList({ setView, data }) {
   return (
     <div>
-      {Data.map((ele) => {
+      {data.map((ele) => {
         if (ele.paid) {
           return (
             <>
