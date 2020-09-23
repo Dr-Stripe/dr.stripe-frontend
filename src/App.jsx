@@ -3,6 +3,9 @@ import "./App.css";
 
 // Components
 
+//stripe promise publishable API key
+
+
 function App({ setIsDoctor }) {
   return (
     <div className="App">
