@@ -8,16 +8,16 @@
 # 👨‍⚕️Dr.Stripe👩‍⚕️
 **NOTE:** This is the frontend repository of this app. For the backend, please go to https://github.com/ryutamura/dr.stripe-backend
 
-**Summary** 
+### Summary  
 This app will let patients pay their medical bills and charge it to the hospital / doctor without waiting to pay. 
 
-##Architecture
+### Architecture  
 picture
 1. step one
 2. step two
 3. step three
 
-## Usage
+### Usage
 1. `yarn install`
 This will install all dependencies.
 
