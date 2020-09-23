@@ -35,5 +35,5 @@ const [currentView, setCurrentView] = useState(true);
       })}
       </div> : <Payment price={price}/> }
     </div>
-  )
+  );
 }
