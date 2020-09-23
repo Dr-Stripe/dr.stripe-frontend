@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
+import Thankyou from "./Thankyou";
 
 // Components
+
+//stripe promise publishable API key
+
 
 function App({ setIsDoctor }) {
   return (
