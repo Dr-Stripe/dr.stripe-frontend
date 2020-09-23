@@ -1,4 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Copyright 2020 Team Banana Inc. and its affiliates
+
+ -Original creation info-
+ Team Banana
+ Date: 2020-09-23 -->
+
+
+# 👨‍⚕️Dr.Stripe👩‍⚕️
+**NOTE:** This is the frontend repository of this app. For the backend, please go to https://github.com/ryutamura/dr.stripe-backend
+
+**Summary** 
+This app will let patients pay their medical bills and charge it to the hospital / doctor without waiting to pay. 
+
+##Architecture
+picture
+1. step one
+2. step two
+3. step three
+
+## Usage
+1. `yarn install`
+This will install all dependencies.
+
+2. blah with pics?
+
+3. blah blah with pics?
+
+4. blah blah blah with pics?
+
+I will populate this later
+
+
+
+
+
+
+
+
+
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -65,4 +105,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify -->
