@@ -7,9 +7,7 @@ export default function Patient() {
   const [view, setView] = useState(true);
   return (
     <div>
-      <h2>Hello</h2>
-      {view ? <Unpaid /> : <PaidList />}
-      <Btn setView={setView} />
+      {view ? <Unpaid setView={setView} /> : <PaidList setView={setView} />}
     </div>
   );
 }

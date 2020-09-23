@@ -6,30 +6,29 @@ import Thankyou from "./Thankyou";
 
 //stripe promise publishable API key
 
-
 function App({ setIsDoctor }) {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Dr.stripe</h1>
-        <p>
-          Are you
-          <button
-            onClick={() => {
-              setIsDoctor("Doctor");
-            }}
-          >
-            Doctor
-          </button>
-          <button
-            onClick={() => {
-              setIsDoctor("Patient");
-            }}
-          >
-            Patient
-          </button>
-        </p>
-      </header>
+      <h1 className="welcome">Welcome to Dr.stripe</h1>
+      <div className="btn_container">
+        <button
+          className="btnDoctor"
+          onClick={() => {
+            setIsDoctor("Doctor");
+          }}
+        >
+          Doctor
+        </button>
+        <button
+          className="btnPatient"
+          onClick={() => {
+            setIsDoctor("Patient");
+          }}
+        >
+          Patient
+          {/* <img src="./healthcare.png" /> */}
+        </button>
+      </div>
     </div>
   );
 }
