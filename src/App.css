@@ -47,25 +47,25 @@ body {
 .btnPatient,
 .btnDoctor {
   font-family: "Baloo Tammudu 2", cursive;
-  padding: 20px;
+  padding: 15px;
   color: white;
   background: #2a566b;
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
   margin: 20px auto;
   border: none;
-  transition: background-color 2s;
-  transition: all 2s;
+  /* transition: background-color 2s; */
+  transition: all 1s;
   box-shadow: 2px 6px 6px rgb(164, 163, 163);
 }
 
 .btnDoctor:hover {
   cursor: pointer;
   padding: 25px;
-  border: 1px solid #2a566b;
-  color: #2a566b;
-  background-color: #fff;
+  font-size: 30px;
+  /* color: #2a566b; */
+  /* background-color: #fff; */
   font-weight: bolder;
 }
 
@@ -73,20 +73,19 @@ body {
   padding: 25px;
   cursor: pointer;
   font-weight: bolder;
-  border: 1px solid #2a566b;
-  color: #2a566b;
-  background-color: #fff;
+  font-size: 30px;
+  /* color: #2a566b; */
 }
 
 .btnDoctor p {
   font-size: 20px;
-  margin-top: 0;
+  /* margin-top: 0; */
   margin-bottom: 10px;
 }
 
 .btnPatient p {
   font-size: 19px;
-  margin-top: 0;
+  /* margin-top: ; */
   margin-bottom: 10px;
 }
 
@@ -94,4 +93,61 @@ body {
   width: 40px;
   position: relative;
   left: 9px;
+  margin-top: 10px;
+}
+
+/* Patient unpaid Page */
+.unPaidCard {
+  background: white;
+  border-radius: 12px;
+  padding: 0 20px;
+  color: gray;
+  margin: 15px;
+  box-shadow: 2px 6px 8px rgb(164, 163, 163);
+}
+
+.unPaidCard h1 {
+  color: #2a566b;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card_hospital {
+  color: gray;
+}
+
+.card_logo {
+  position: relative;
+  top: 15px;
+}
+
+.card_checkout {
+  background: #2a566b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+
+.card_checkout:hover {
+  cursor: pointer;
+  padding: 17px;
+}
+
+/* button component */
+
+.component_btn {
+  border: none;
+  background: gray;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 0 8px;
+}
+
+.component_btn:hover {
+  cursor: pointer;
 }

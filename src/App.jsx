@@ -20,8 +20,8 @@ function App({ setIsDoctor }) {
             setIsDoctor("Doctor");
           }}
         >
-          <p>Doctor</p>
           <img src="/care.png" className="btnlogo" />
+          <p>Doctor</p>
         </button>
         <button
           className="btnPatient"
@@ -29,8 +29,8 @@ function App({ setIsDoctor }) {
             setIsDoctor("Patient");
           }}
         >
-          <p>Patient</p>
           <img src="/doctor.png" className="btnlogo" />
+          <p>Patient</p>
           {/* <img src="./healthcare.png" /> */}
         </button>
       </div>
