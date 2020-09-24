@@ -11,14 +11,11 @@ export default function PaindList({ setView, data }) {
         if (ele.paid) {
           return (
             <>
-              <div className="paiedList">
-                <h3>Date</h3>
-                <p>{ele.visit_date}</p>
-                <h3>Treatment</h3>
+              <div className="unPaidCard">
+                <img src="/check.png" width="50px" className="checkImg" />
+                <h1 className="card">{ele.price}</h1>
                 <p>{ele.treatment}</p>
-                <h3>Price</h3>
-                <p>{ele.price}</p>
-                <h3>Hospital Name</h3>
+                <p>{ele.visit_date}</p>
                 <p>{ele.hospital_name}</p>
               </div>
             </>

@@ -151,3 +151,10 @@ body {
 .component_btn:hover {
   cursor: pointer;
 }
+
+/* .paiedList */
+
+.checkImg {
+  position: relative;
+  top: 20px;
+}
