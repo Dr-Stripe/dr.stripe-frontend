@@ -4,16 +4,16 @@ import React, { useState } from "react";
 
 import Btn from "./Btn";
 
-export default function UnpaidList({ setView, data, setPaidView }) {
-  const [price, setPrice] = useState("");
+export default function UnpaidList({ setView, data, setPaidView, paymentData, setPaymentData}) {
   // const [currentView, setCurrentView] = useState(true);
 
   return (
     <div>
-      {data.map((visit) => {
+      <div>
+      {data.map((visit, index) => {
         if (!visit.paid) {
-          return (
-            <div className="unPaidCard">
+           return (
+            <div key={index} className="unPaidCard">
               <h1 className="card" name="price">
                 {visit.price}
               </h1>
@@ -32,8 +32,10 @@ export default function UnpaidList({ setView, data, setPaidView }) {
               <button
                 className="card_checkout"
                 onClick={() => {
-                  //get visit price
-                  setPrice(visit.price);
+                  //get visit data
+                  console.log(data[index])
+                  //set visit data to pass to DB upon payment
+                  setPaymentData(data[index]);
                   // setCurrentView(false);
                   setPaidView("pay");
                 }}
@@ -41,10 +43,11 @@ export default function UnpaidList({ setView, data, setPaidView }) {
                 Checkout
               </button>
             </div>
-          );
+          )
         }
       })}
       <Btn setView={setView} />
+      </div>
     </div>
   );
 }
