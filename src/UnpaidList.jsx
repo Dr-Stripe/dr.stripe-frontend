@@ -4,15 +4,16 @@ import React, { useState } from "react";
 
 import Btn from "./Btn";
 
-export default function UnpaidList({ setView, data, setPaidView }) {
-  const [price, setPrice] = useState("");
+export default function UnpaidList({ setView, data, setPaidView, paymentData, setPaymentData}) {
   // const [currentView, setCurrentView] = useState(true);
 
   return (
     <div>
-      {data.map((visit) => {
+      <div>
+      {data.map((visit, index) => (
+        <div id="each-visit" key={index}>
         if (!visit.paid) {
-          return (
+          (
             <>
               <h4>Date</h4>
               <div>{visit.visit_date}</div>
@@ -29,16 +30,18 @@ export default function UnpaidList({ setView, data, setPaidView }) {
                 value="Checkout"
                 onClick={() => {
                   //get visit price
-                  setPrice(visit.price);
+                  console.log(data[index])
+                  setPaymentData(data[index]);
                   // setCurrentView(false);
                   setPaidView("pay");
                 }}
               />
             </>
-          );
+          )
         }
-      })}
+      </div>))}
       <Btn setView={setView} />
+      </div>
     </div>
   );
 }
