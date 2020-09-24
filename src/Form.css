@@ -1,5 +1,5 @@
 html {
-  margin: auto 5px;
+  margin: 20px 5px;
 }
 
 .icon {
@@ -36,12 +36,10 @@ label {
   /* line-height: 25px; */
 }
 
-.label {
-  line-height: 3px;
-}
 /*make a space between label and button*/
 .inLabel {
-  line-height: 2px;
+  line-height: 1px;
+  color: black;
 }
 
 .formLogo {

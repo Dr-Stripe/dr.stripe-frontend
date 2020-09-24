@@ -55,21 +55,24 @@ export default function Form({ setDocview }) {
               <textarea name="treatment" placeholder="Treatment" />
             </label>
             <br />
+            {/* </p> */}
+            <label>
+              <p className="inLabel">Name of Doctor</p>
+              <input name="doctor" type="text" placeholder="Doctor" />
+            </label>
+            <br />
+            <label>
+              <p className="inLabel">Hospital Name</p>
+              <input name="hospital" type="text" placeholder="Hospital Name" />
+            </label>
           </p>
-          <label>
-            <p className="inLabel">Name of Doctor</p>
-            <input name="doctor" type="text" placeholder="Doctor" />
-          </label>
           <br />
-          <label>
-            <p className="inLabel">Hospital Name</p>
-            <input name="hospital" type="text" placeholder="Hospital Name" />
-          </label>
-          <br />
-          <label>
-            <p className="inLabel">Price</p>
-            <input name="price" type="text" placeholder="Price" />
-          </label>
+          <p className="label">
+            <label>
+              <p className="inLabel">Price</p>
+              <input name="price" type="text" placeholder="Price" />
+            </label>
+          </p>
           <br />
           {/* better to chose by locatin  */}
           <label>
