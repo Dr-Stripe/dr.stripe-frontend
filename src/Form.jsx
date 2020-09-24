@@ -30,15 +30,16 @@ export default function Form({ setDocview }) {
           Id
           <input name="patient_id" />
         </label>
+        <br />
         {/* <label>
           Visit Date
           <input name="visit" type="text" placeholder="Visit Date" />
         </label> */}
-        <br />
         <label>
           symptoms
           <input name="symptoms"></input>
         </label>
+        <br />
         <label>
           Treatment
           <textarea name="treatment" placeholder="Treatment" />
@@ -48,17 +49,18 @@ export default function Form({ setDocview }) {
           Name of Doctor
           <input name="doctor" type="text" placeholder="Doctor" />
         </label>
+        <br />
         <label>
           Hospital Name
           <input name="hospital" type="text" placeholder="Hospital Name" />
         </label>
+        <br />
         <label>
           Price
           <input name="price" type="text" placeholder="Price" />
         </label>
         <br />
         {/* better to chose by locatin  */}
-        <br />
         <label>
           <button
             type="submit"

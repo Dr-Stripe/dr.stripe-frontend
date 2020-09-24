@@ -26,6 +26,8 @@ Form {
 }
 
 .formSubmitButtonDesign {
+  -webkit-appearance: button;
+  -moz-appearance: button;
   appearance: button;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
@@ -48,4 +50,21 @@ Form {
   border-style: outset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
   border-image: initial;
+  background: #2a566b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+
+.formSubmitButtonDesign:hover {
+  cursor: pointer;
+  padding: 20px;
+  font-size: 15px;
+  /* color: #2a566b; */
+  /* background-color: #fff; */
+  /* font-weight: bolder; */
 }
