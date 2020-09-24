@@ -13,28 +13,34 @@ export default function UnpaidList({ setView, data, setPaidView }) {
       {data.map((visit) => {
         if (!visit.paid) {
           return (
-            <>
-              <h4>Date</h4>
-              <div>{visit.visit_date}</div>
-              <h4>Treatment</h4>
-              <div>{visit.treatment}</div>
-              <h4>Price</h4>
-              <div name="price" value={visit.price}>
+            <div className="unPaidCard">
+              <h1 className="card" name="price">
                 {visit.price}
+              </h1>
+              <div>
+                <img className="card_logo" src="time.png" width="40px" />
+                {visit.visit_date}
               </div>
-              <h4>Hospital Name</h4>
-              <div>{visit.hospital_name}</div>
-              <input
-                type="button"
-                value="Checkout"
+              <div>
+                <img className="card_logo" src="aid.png" width="40px" />
+                {visit.treatment}
+              </div>
+              <div className="card_hospital">
+                <img className="card_logo" src="/location.png" width="35px" />
+                {visit.hospital_name}
+              </div>
+              <button
+                className="card_checkout"
                 onClick={() => {
                   //get visit price
                   setPrice(visit.price);
                   // setCurrentView(false);
                   setPaidView("pay");
                 }}
-              />
-            </>
+              >
+                Checkout
+              </button>
+            </div>
           );
         }
       })}
