@@ -4,6 +4,7 @@ export default function Btn({ setView }) {
   return (
     <div>
       <button
+        className="component_btn"
         onClick={() => {
           setView(false);
         }}
@@ -11,6 +12,7 @@ export default function Btn({ setView }) {
         Paid
       </button>
       <button
+        className="component_btn"
         onClick={() => {
           setView(true);
         }}

@@ -10,36 +10,42 @@ export default function UnpaidList({ setView, data, setPaidView, paymentData, se
   return (
     <div>
       <div>
-      {data.map((visit, index) => (
-        <div id="each-visit" key={index}>
+      {data.map((visit, index) => {
         if (!visit.paid) {
-          (
-            <>
-              <h4>Date</h4>
-              <div>{visit.visit_date}</div>
-              <h4>Treatment</h4>
-              <div>{visit.treatment}</div>
-              <h4>Price</h4>
-              <div name="price" value={visit.price}>
+           return (
+            <div key={index} className="unPaidCard">
+              <h1 className="card" name="price">
                 {visit.price}
+              </h1>
+              <div>
+                <img className="card_logo" src="time.png" width="40px" />
+                {visit.visit_date}
               </div>
-              <h4>Hospital Name</h4>
-              <div>{visit.hospital_name}</div>
-              <input
-                type="button"
-                value="Checkout"
+              <div>
+                <img className="card_logo" src="aid.png" width="40px" />
+                {visit.treatment}
+              </div>
+              <div className="card_hospital">
+                <img className="card_logo" src="/location.png" width="35px" />
+                {visit.hospital_name}
+              </div>
+              <button
+                className="card_checkout"
                 onClick={() => {
-                  //get visit price
+                  //get visit data
                   console.log(data[index])
+                  //set visit data to pass to DB upon payment
                   setPaymentData(data[index]);
                   // setCurrentView(false);
                   setPaidView("pay");
                 }}
-              />
-            </>
+              >
+                Checkout
+              </button>
+            </div>
           )
         }
-      </div>))}
+      })}
       <Btn setView={setView} />
       </div>
     </div>
