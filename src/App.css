@@ -33,7 +33,7 @@ body {
 }
 .header_img {
   position: relative;
-  left: -4px;
+  left: -2px;
 }
 .welcome {
   color: white;
@@ -157,4 +157,39 @@ body {
 .checkImg {
   position: relative;
   top: 20px;
+}
+
+/* payment */
+.payment_btn {
+  font-family: "Baloo Tammudu 2", cursive;
+  padding: 12px 30px;
+  color: white;
+  background: #2a566b;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  border: none;
+  transition: all 1s;
+  box-shadow: 2px 6px 6px rgb(164, 163, 163);
+}
+
+.pay_p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.payment_pay_btn {
+  position: relative;
+  left: -3px;
+}
+
+.container_payment {
+  background: white;
+  border-radius: 12px;
+  padding: 0 20px;
+  color: gray;
+  margin: 15px;
+  box-shadow: 2px 6px 8px rgb(164, 163, 163);
+  text-align: center;
 }
