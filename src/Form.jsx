@@ -26,50 +26,54 @@ export default function Form({ setDocview }) {
         }}
         id="doctor-visit-report"
       >
-        <label>
-          Id
-          <input name="patient_id" />
-        </label>
-        <br />
-        {/* <label>
+        <div className="formInput">
+          <label className="formLogo">Form</label>
+          <br />
+          <label>
+            Id
+            <input name="patient_id" />
+          </label>
+          <br />
+          {/* <label>
           Visit Date
           <input name="visit" type="text" placeholder="Visit Date" />
         </label> */}
-        <label>
-          symptoms:
-          <input name="symptoms"></input>
-        </label>
-        <br />
-        <label>
-          Treatment
-          <textarea name="treatment" placeholder="Treatment" />
-        </label>
-        <br />
-        <label>
-          Name of Doctor
-          <input name="doctor" type="text" placeholder="Doctor" />
-        </label>
-        <br />
-        <label>
-          Hospital Name
-          <input name="hospital" type="text" placeholder="Hospital Name" />
-        </label>
-        <br />
-        <label>
-          Price
-          <input name="price" type="text" placeholder="Price" />
-        </label>
-        <br />
-        {/* better to chose by locatin  */}
-        <label>
-          <button
-            type="submit"
-            value="Submit"
-            className="formSubmitButton formSubmitButtonDesign"
-          >
-            Submit
-          </button>
-        </label>
+          <label>
+            symptoms
+            <input name="symptoms"></input>
+          </label>
+          <br />
+          <label>
+            Treatment
+            <textarea name="treatment" placeholder="Treatment" />
+          </label>
+          <br />
+          <label>
+            Name of Doctor
+            <input name="doctor" type="text" placeholder="Doctor" />
+          </label>
+          <br />
+          <label>
+            Hospital Name
+            <input name="hospital" type="text" placeholder="Hospital Name" />
+          </label>
+          <br />
+          <label>
+            Price
+            <input name="price" type="text" placeholder="Price" />
+          </label>
+          <br />
+          {/* better to chose by locatin  */}
+          <label>
+            <button
+              type="submit"
+              value="Submit"
+              className="formSubmitButton formSubmitButtonDesign"
+            >
+              Submit
+            </button>
+          </label>
+        </div>
       </form>
     </div>
   );
