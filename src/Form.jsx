@@ -1,9 +1,10 @@
 import React from "react";
+import "./Form.css";
 const axios = require("axios");
 
 export default function Form({ setDocview }) {
   return (
-    <div>
+    <div className="formContainer">
       <form
         onSubmit={async (e) => {
           //insert into database method and fix symptom
@@ -59,7 +60,13 @@ export default function Form({ setDocview }) {
         {/* better to chose by locatin  */}
         <br />
         <label>
-          <button type="submit" value="Submit" />
+          <button
+            type="submit"
+            value="Submit"
+            className="formSubmitButton formSubmitButtonDesign"
+          >
+            Submit
+          </button>
         </label>
       </form>
     </div>
