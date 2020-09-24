@@ -75,12 +75,23 @@ if(paymentData) {
         </CardCvcElement>
         <button
           onClick={async() => {
-            console.log("PRICE" + paymentData)
             await axios.post('https://cc14doctorstripe-app.herokuapp.com/create-session', {
               paymentData: {paymentData}
             }).then(result=>{
               console.log(result)
             })
+
+          const proxyurl = "https://cors-anywhere.herokuapp.com/"
+           await axios.patch(proxyurl + 'https://cc14doctorstripe-app.herokuapp.com/payments/1', {
+            "doctor": paymentData.doctor,
+            "hospital_name": paymentData.hospital_name,
+            "medicine": paymentData.medicine,
+            "paid": paymentData.paid,
+            "price": paymentData.price,
+            "treatment": paymentData.treatment,
+            "visit_date": paymentData.visit_date,
+            "visit_id": paymentData.visit_id
+          })
             setPaidView("");
           }}
         >
