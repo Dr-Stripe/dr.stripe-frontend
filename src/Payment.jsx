@@ -6,26 +6,26 @@ import {
 } from "@stripe/react-stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-const axios = require('axios');
+const axios = require("axios");
 
 export default function Payment({ paymentData, setPaidView }) {
   const stripePromise = loadStripe(
     "pk_test_51HU0G2CjwFEQ1pgcvOchnwo0Gsb2seN5a3xGz8Q2iCvlVUjHkSCV7UZHy3NfeobxNNMeGwmiosi3UBxjbKcSjGZ000hENfQW0F"
   );
-if(paymentData) {
-  console.log(paymentData)
-}
+  if (paymentData) {
+    console.log(paymentData);
+  }
   return (
-    <div>
-      <h1>payment</h1>
+    <div className="container_payment">
+      <h1>Payment Infomation</h1>
       <Elements stripe={stripePromise}>
-        Card Number:
+        Card Number
         <CardNumberElement>
           options=
           {{
             style: {
               base: {
-                fontSize: "20px",
+                fontSize: "30px",
                 color: "#324770",
                 "::placeholder": {
                   color: "#aab7c4",
@@ -37,13 +37,13 @@ if(paymentData) {
             },
           }}
         </CardNumberElement>
-        Expiration:
+        Expiration
         <CardExpiryElement>
           options=
           {{
             style: {
               base: {
-                fontSize: "20px",
+                fontSize: "30px",
                 color: "#324770",
                 "::placeholder": {
                   color: "#aab7c4",
@@ -55,16 +55,16 @@ if(paymentData) {
             },
           }}
         </CardExpiryElement>
-        CVC:
+        CVC
         <CardCvcElement>
           options=
           {{
             style: {
               base: {
-                fontSize: "20px",
+                fontSize: "30px",
                 color: "#324770",
                 "::placeholder": {
-                  color: "#aab7c4",
+                  color: "black",
                 },
               },
               invalid: {
@@ -74,17 +74,24 @@ if(paymentData) {
           }}
         </CardCvcElement>
         <button
-          onClick={async() => {
-            console.log("PRICE" + paymentData)
-            await axios.post('https://cc14doctorstripe-app.herokuapp.com/create-session', {
-              paymentData: {paymentData}
-            }).then(result=>{
-              console.log(result)
-            })
+          className="payment_btn"
+          onClick={async () => {
+            console.log("PRICE" + paymentData);
+            await axios
+              .post(
+                "https://cc14doctorstripe-app.herokuapp.com/create-session",
+                {
+                  paymentData: { paymentData },
+                }
+              )
+              .then((result) => {
+                console.log(result);
+              });
             setPaidView("");
           }}
         >
-          Pay 
+          <img src="/checkW.png" className="payment_pay_btn" />
+          <p className="pay_p">Pay</p>
         </button>
       </Elements>
     </div>
