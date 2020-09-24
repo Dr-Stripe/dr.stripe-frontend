@@ -4,62 +4,70 @@ const axios = require("axios");
 
 export default function Form({ setDocview }) {
   return (
-    <div className="formContainer">
-      <form
-        onSubmit={async (e) => {
-          //insert into database method and fix symptom
-          e.preventDefault();
-          await axios.post(
-            "https://cc14doctorstripe-app.herokuapp.com/visits/1",
-            {
-              patient_id: e.target.patient_id.value,
-              treatment: e.target.treatment.value,
-              symptoms: e.target.symptoms.value,
-              doctor: e.target.doctor.value,
-              paid: false,
-              madecine: false,
-              price: e.target.price.value,
-              hospital_name: e.target.hospital.value,
-            }
-          );
-          setDocview(false);
-        }}
-        id="doctor-visit-report"
-      >
-        <div className="formInput">
-          <label className="formLogo">Form</label>
+    <p>
+      <p className="icon">
+        <img src="healthcare.png" width="60px" />
+      </p>
+      <div className="formContainer">
+        <img class="card_logo" src="hospital.png" width="40px" />
+        <form
+          onSubmit={async (e) => {
+            //insert into database method and fix symptom
+            e.preventDefault();
+            await axios.post(
+              "https://cc14doctorstripe-app.herokuapp.com/visits/1",
+              {
+                patient_id: e.target.patient_id.value,
+                treatment: e.target.treatment.value,
+                symptoms: e.target.symptoms.value,
+                doctor: e.target.doctor.value,
+                paid: false,
+                madecine: false,
+                price: e.target.price.value,
+                hospital_name: e.target.hospital.value,
+              }
+            );
+            setDocview(false);
+          }}
+          id="doctor-visit-report"
+        >
+          <label className="formLogo">Doctor Form</label>
           <br />
-          <label>
-            Id
-            <input name="patient_id" />
-          </label>
+          <p className="label">
+            <label>
+              <p className="inLabel">ID</p>
+              <input name="patient_id" placeholder="ID" />
+            </label>
+          </p>
           <br />
           {/* <label>
           Visit Date
           <input name="visit" type="text" placeholder="Visit Date" />
         </label> */}
+          <p className="label">
+            <label>
+              <p className="inLabel">Symptoms</p>
+              <input name="symptoms" placeholder="Symptoms"></input>
+            </label>
+            <br />
+            <label>
+              <p className="inLabel">Treatment</p>
+              <textarea name="treatment" placeholder="Treatment" />
+            </label>
+            <br />
+          </p>
           <label>
-            symptoms
-            <input name="symptoms"></input>
-          </label>
-          <br />
-          <label>
-            Treatment
-            <textarea name="treatment" placeholder="Treatment" />
-          </label>
-          <br />
-          <label>
-            Name of Doctor
+            <p className="inLabel">Name of Doctor</p>
             <input name="doctor" type="text" placeholder="Doctor" />
           </label>
           <br />
           <label>
-            Hospital Name
+            <p className="inLabel">Hospital Name</p>
             <input name="hospital" type="text" placeholder="Hospital Name" />
           </label>
           <br />
           <label>
-            Price
+            <p className="inLabel">Price</p>
             <input name="price" type="text" placeholder="Price" />
           </label>
           <br />
@@ -73,8 +81,8 @@ export default function Form({ setDocview }) {
               Submit
             </button>
           </label>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </p>
   );
 }

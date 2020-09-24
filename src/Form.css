@@ -1,25 +1,54 @@
+html {
+  margin: auto 5px;
+}
+
+.icon {
+  text-align: center;
+  margin: auto 30px;
+  /* position: relative; */
+}
+
 Form {
   font-family: "Baloo Tammudu 2", cursive;
   position: relative;
+  width: 50%;
 }
 
 .formContainer {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   background: white;
   border-radius: 12px;
   padding: 20px 20px;
   margin: 15px;
-  box-shadow: 2px 6px 8px reg;
+  /* box-shadow: 2px 6px 8px reg; */
   box-shadow: 2px 6px 8px grey;
+  background: white;
+  border-radius: 12px;
+  padding: 0 20px;
+  color: gray;
+  margin: 15px;
+  /* box-shadow: 2px 6px 8px rgb(164, 163, 163); */
+  text-align: -webkit-center;
 }
 
+label {
+  letter-spacing: 3px;
+  /* line-height: 25px; */
+}
+
+.label {
+  line-height: 3px;
+}
 /*make a space between label and button*/
-.formInput label input {
-  margin-right: 10px;
+.inLabel {
+  line-height: 2px;
 }
 
 .formLogo {
   font-size: xx-large;
+  color: #2a566b;
+  font-weight: bold;
+  margin: 10px 10px;
 }
 
 .formSubmitButton {
@@ -31,7 +60,7 @@ Form {
   border: none;
   /* transition: background-color 2s; */
   transition: all 1s;
-  box-shadow: 2px 6px 6px rgb(164, 163, 163);
+  /* box-shadow: 2px 6px 6px rgb(164, 163, 163); */
 }
 
 .formSubmitButtonDesign {
@@ -45,7 +74,7 @@ Form {
   word-spacing: normal;
   text-transform: none;
   text-indent: 0px;
-  text-shadow: none;
+  /* text-shadow: none; */
   display: inline-block;
   text-align: center;
   align-items: flex-start;
