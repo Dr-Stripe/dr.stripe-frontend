@@ -16,16 +16,18 @@ export default function UnpaidList({
   return (
     <div>
       <div>
+        <Btn setView={setView} />
         {data.map((visit, index) => {
           if (!visit.paid) {
             return (
               <div key={index} className="unPaidCard">
                 <h1 className="card" name="price">
+                  <img src="/yen.png" width="20px" />
                   {visit.price}
                 </h1>
                 <div>
                   <img className="card_logo" src="time.png" width="40px" />
-                  {visit.visit_date}
+                  {visit.visit_date.slice(0, 10)}
                 </div>
                 <div>
                   <img className="card_logo" src="aid.png" width="40px" />
@@ -52,7 +54,6 @@ export default function UnpaidList({
             );
           }
         })}
-        <Btn setView={setView} />
       </div>
     </div>
   );

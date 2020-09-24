@@ -9,6 +9,13 @@ export default function Patient({ data }) {
 
   return (
     <div class="patient_container">
+      <div className="home_container">
+        <img src="/homeG.png" width="20px" className="logo_home" />
+        <img src="/userG.png" width="20px" className="logo_home" />
+      </div>
+      <img src="/healthcare.png" className="patient_topLogo" />
+      <h1 className="patinet_h1">Hello , Jiro.</h1>
+      <p className="welcome_greeting">welcome back to Dr.Stripe</p>
       {view ? (
         <UnpaidView
           paymentData={paymentData}

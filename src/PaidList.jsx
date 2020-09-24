@@ -7,22 +7,28 @@ import "./App.css";
 export default function PaindList({ setView, data }) {
   return (
     <div>
+      <Btn setView={setView} />
       {data.map((ele) => {
         if (ele.paid) {
           return (
             <>
-              <div className="unPaidCard">
-                <img src="/check.png" width="50px" className="checkImg" />
-                <h1 className="card">{ele.price}</h1>
+              <div className="PaidCard">
+                <img src="/checkB.png" width="50px" className="checkImg" />
+                <h1 className="card">
+                  <img src="/yen.png" width="20px" />
+                  {ele.price}
+                </h1>
+                <p>
+                  {/* <img src="t /> */}
+                  {ele.visit_date}
+                </p>
                 <p>{ele.treatment}</p>
-                <p>{ele.visit_date}</p>
                 <p>{ele.hospital_name}</p>
               </div>
             </>
           );
         }
       })}
-      <Btn setView={setView} />
     </div>
   );
 }
