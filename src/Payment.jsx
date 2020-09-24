@@ -74,6 +74,7 @@ export default function Payment({ paymentData, setPaidView }) {
           }}
         </CardCvcElement>
         <button
+          className="payment_btn"
           onClick={async () => {
             await axios
               .post(
@@ -104,7 +105,7 @@ export default function Payment({ paymentData, setPaidView }) {
             setPaidView("");
           }}
         >
-          <img src="/checkW.png" className="payment_pay_btn" />
+          <img src="/checkW.png" />
           <p className="pay_p">Pay</p>
         </button>
       </Elements>

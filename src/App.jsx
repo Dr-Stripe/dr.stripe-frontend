@@ -29,9 +29,8 @@ function App({ setIsDoctor }) {
             setIsDoctor("Patient");
           }}
         >
-          <img src="/doctor.png" className="btnlogo" />
           <p>Patient</p>
-          {/* <img src="./healthcare.png" /> */}
+          <img src="/doctor.png" className="btnlogo" />
         </button>
       </div>
     </div>
