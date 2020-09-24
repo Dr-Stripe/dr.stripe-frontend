@@ -14,9 +14,7 @@ export default function UnpaidList({ setView, data, setPaidView }) {
         if (!visit.paid) {
           return (
             <div className="unPaidCard">
-              <h1 className="card" name="price">
-                {visit.price}
-              </h1>
+              <h1 className="card">{visit.price}</h1>
               <div>
                 <img className="card_logo" src="time.png" width="40px" />
                 {visit.visit_date}
