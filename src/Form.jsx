@@ -36,7 +36,7 @@ export default function Form({ setDocview }) {
           <input name="visit" type="text" placeholder="Visit Date" />
         </label> */}
         <label>
-          symptoms
+          symptoms:
           <input name="symptoms"></input>
         </label>
         <br />

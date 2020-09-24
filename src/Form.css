@@ -68,3 +68,7 @@ Form {
   /* background-color: #fff; */
   /* font-weight: bolder; */
 }
+
+/*make a space between label and button*/
+input[type="text"] {
+}
