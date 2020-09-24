@@ -74,30 +74,37 @@ export default function Payment({ paymentData, setPaidView }) {
           }}
         </CardCvcElement>
         <button
+          onClick={async () => {
+            await axios
+              .post(
+                "https://cc14doctorstripe-app.herokuapp.com/create-session",
+                {
+                  paymentData: { paymentData },
+                }
+              )
+              .then((result) => {
+                console.log(result);
+              });
 
-
-          onClick={async() => {
-            await axios.post('https://cc14doctorstripe-app.herokuapp.com/create-session', {
-              paymentData: {paymentData}
-            }).then(result=>{
-              console.log(result)
-            })
-
-          const proxyurl = "https://cors-anywhere.herokuapp.com/"
-           await axios.patch(proxyurl + 'https://cc14doctorstripe-app.herokuapp.com/payments/1', {
-            "doctor": paymentData.doctor,
-            "hospital_name": paymentData.hospital_name,
-            "medicine": paymentData.medicine,
-            "paid": paymentData.paid,
-            "price": paymentData.price,
-            "treatment": paymentData.treatment,
-            "visit_date": paymentData.visit_date,
-            "visit_id": paymentData.visit_id
-          })
+            const proxyurl = "https://cors-anywhere.herokuapp.com/";
+            await axios.patch(
+              proxyurl +
+                "https://cc14doctorstripe-app.herokuapp.com/payments/1",
+              {
+                doctor: paymentData.doctor,
+                hospital_name: paymentData.hospital_name,
+                medicine: paymentData.medicine,
+                paid: paymentData.paid,
+                price: paymentData.price,
+                treatment: paymentData.treatment,
+                visit_date: paymentData.visit_date,
+                visit_id: paymentData.visit_id,
+              }
+            );
             setPaidView("");
           }}
         >
-          <img src="/checkW.png" className="payment_pay_btn" />
+          <img src="/checkW.png" />
           <p className="pay_p">Pay</p>
         </button>
       </Elements>

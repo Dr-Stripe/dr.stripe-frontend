@@ -8,11 +8,11 @@ export default function Patient({ data }) {
   const [paymentData, setPaymentData] = useState();
 
   return (
-    <div>
+    <div class="patient_container">
       {view ? (
         <UnpaidView
-        paymentData={paymentData}
-        setPaymentData={setPaymentData}
+          paymentData={paymentData}
+          setPaymentData={setPaymentData}
           setView={setView}
           data={data}
           setPaidView={setPaidView}
