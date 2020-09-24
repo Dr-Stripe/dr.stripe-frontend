@@ -6,12 +6,15 @@ import {
 } from "@stripe/react-stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+const axios = require('axios');
 
-export default function Payment({ price, setPaidView }) {
+export default function Payment({ paymentData, setPaidView }) {
   const stripePromise = loadStripe(
     "pk_test_51HU0G2CjwFEQ1pgcvOchnwo0Gsb2seN5a3xGz8Q2iCvlVUjHkSCV7UZHy3NfeobxNNMeGwmiosi3UBxjbKcSjGZ000hENfQW0F"
   );
-
+if(paymentData) {
+  console.log(paymentData)
+}
   return (
     <div>
       <h1>payment</h1>
@@ -71,11 +74,17 @@ export default function Payment({ price, setPaidView }) {
           }}
         </CardCvcElement>
         <button
-          onClick={() => {
+          onClick={async() => {
+            console.log("PRICE" + paymentData)
+            await axios.post('https://cc14doctorstripe-app.herokuapp.com/create-session', {
+              paymentData: {paymentData}
+            }).then(result=>{
+              console.log(result)
+            })
             setPaidView("");
           }}
         >
-          Pay {price}
+          Pay 
         </button>
       </Elements>
     </div>

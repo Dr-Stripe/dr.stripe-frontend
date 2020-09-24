@@ -4,13 +4,13 @@ import UnpaidList from "./UnpaidList";
 import Payment from "./Payment";
 import Thankyou from "./Thankyou";
 
-export default function UnpaidView({ setView, setPaidView, paidView, data }) {
+export default function UnpaidView({ setView, setPaidView, paidView, data, setPaymentData, paymentData }) {
   if (paidView === "paid") {
     return (
-      <UnpaidList setView={setView} setPaidView={setPaidView} data={data} />
+      <UnpaidList paymentData={paymentData} setPaymentData={setPaymentData} setView={setView} setPaidView={setPaidView} data={data} />
     );
   } else if (paidView === "pay") {
-    return <Payment setPaidView={setPaidView} />;
+    return <Payment paymentData={paymentData} setPaymentData={setPaymentData} setPaidView={setPaidView} />;
   } else {
     return <Thankyou />;
   }
