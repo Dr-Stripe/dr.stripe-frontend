@@ -81,6 +81,8 @@ if(paymentData) {
             }).then(result=>{
               console.log(result)
             })
+
+           await axios.post('https://cc14doctorstripe-app.herokuapp.com/payments/:visit_id', {paymentData})
             setPaidView("");
           }}
         >
