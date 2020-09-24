@@ -10,23 +10,24 @@ export default function Form({ setDocview }) {
           e.preventDefault();
           await axios.post(
             "https://cc14doctorstripe-app.herokuapp.com/visits/1",
-            JSON.stringify({
+            {
               patient_id: e.target.patient_id.value,
               treatment: e.target.treatment.value,
-              symptoms: "insert symptom value",
+              symptoms: e.target.symptoms.value,
               doctor: e.target.doctor.value,
               paid: false,
               madecine: false,
               price: e.target.price.value,
               hospital_name: e.target.hospital.value,
-            })
+            }
           );
+          setDocview(false);
         }}
         id="doctor-visit-report"
       >
         <label>
           Id
-          <input name="patient_id" type="text" />
+          <input name="patient_id" />
         </label>
         {/* <label>
           Visit Date
@@ -58,13 +59,7 @@ export default function Form({ setDocview }) {
         {/* better to chose by locatin  */}
         <br />
         <label>
-          <input
-            onClick={() => {
-              setDocview(false);
-            }}
-            type="submit"
-            value="Submit"
-          />
+          <button type="submit" value="Submit" />
         </label>
       </form>
     </div>
