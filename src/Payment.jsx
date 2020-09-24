@@ -74,8 +74,6 @@ export default function Payment({ paymentData, setPaidView }) {
           }}
         </CardCvcElement>
         <button
-<<<<<<< HEAD
-          className="payment_btn"
           onClick={async () => {
             await axios
               .post(
@@ -103,28 +101,6 @@ export default function Payment({ paymentData, setPaidView }) {
                 visit_id: paymentData.visit_id,
               }
             );
-=======
-
-
-          onClick={async() => {
-            await axios.post('https://cc14doctorstripe-app.herokuapp.com/create-session', {
-              paymentData: {paymentData}
-            }).then(result=>{
-              console.log(result)
-            })
-
-          const proxyurl = "https://cors-anywhere.herokuapp.com/"
-           await axios.patch(proxyurl + 'https://cc14doctorstripe-app.herokuapp.com/payments/1', {
-            "doctor": paymentData.doctor,
-            "hospital_name": paymentData.hospital_name,
-            "medicine": paymentData.medicine,
-            "paid": paymentData.paid,
-            "price": paymentData.price,
-            "treatment": paymentData.treatment,
-            "visit_date": paymentData.visit_date,
-            "visit_id": paymentData.visit_id
-          })
->>>>>>> 9e2584c3664f6d46951cf31ae43b661df7961442
             setPaidView("");
           }}
         >
