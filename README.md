@@ -9,7 +9,6 @@
 
 *This was developed during my time as a student at Code Chrysalis.* 
  
-## Summary  
 ### This app will let patients pay their medical bills and charge it to the hospital / doctor without waiting to pay. 
 
 ## Image of our app
@@ -40,7 +39,7 @@
 **NOTE:** This is the frontend repository of this app. For the backend, please go to 
 ### https://github.com/ryutamura/dr.stripe-backend
 
-# Author 
+## Author 
 ### Tanner Haberl 
 ### Ryu Tamura
 ### Akina Ohira
