@@ -68,7 +68,7 @@ textarea {
   border: none;
   /* transition: background-color 2s; */
   transition: all 1s;
-  /* box-shadow: 2px 6px 6px rgb(164, 163, 163); */
+  box-shadow: 2px 6px 6px rgb(164, 163, 163);
 }
 
 .formSubmitButtonDesign {
