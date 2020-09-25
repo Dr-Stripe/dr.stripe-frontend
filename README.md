@@ -7,38 +7,45 @@
 
 # 👨‍⚕️Dr.Stripe👩‍⚕️
 
-#### This was developed during my time as a student at Code Chrysalis. 
-
-**NOTE:** This is the frontend repository of this app. For the backend, please go to https://github.com/ryutamura/dr.stripe-backend
+*This was developed during my time as a student at Code Chrysalis.* 
  
-### Summary  
-This app will let patients pay their medical bills and charge it to the hospital / doctor without waiting to pay. 
+## Summary  
+### This app will let patients pay their medical bills and charge it to the hospital / doctor without waiting to pay. 
 
-The image of our app:
+## Image of our app
+### Home
+<img src="https://i.ibb.co/4gKh0zj/2020-09-25-180737.jpg" alt="image of app" title="app">
 
-![Image of app]
-(https://i.ibb.co/KWqCsyy/2020-09-25-12-29-21.png)
+### Patient page 
+<img src="https://i.ibb.co/HCcjF71/2020-09-25-180439.jpg" alt="image of app" title="app">
 
-
-### Architecture  
-picture
-1. step one
-2. step two
-3. step three
-
-### Usage
-1. `yarn install`
-This will install all dependencies.
-
-2. blah with pics?
-
-3. blah blah with pics?
-
-4. blah blah blah with pics?
-
-I will populate this later
+### Doctor page 
+<img src="https://i.ibb.co/SfCqzBj/2020-09-25-180621.jpg" alt="image of app" title="app">
 
 
+## Features  
+### 1. Pay medical fees contact-free on mobile.
+--Eliminating any waiting time in the lobby and physical exchange of cash!
+ 
+### 2. Manage visit history.
+--When was your last appointment? Did you get a prescription/refill ? We are here for you!
+
+### 3 .Doctor Interface.
+--Easy to use for both doctors and patients!
+
+## Usage
+### Here is the url of our app 
+### https://dr-stripe-frontend-cyo40k043.vercel.app/
+
+**NOTE:** This is the frontend repository of this app. For the backend, please go to 
+### https://github.com/ryutamura/dr.stripe-backend
+
+# Author 
+### Tanner Haberl 
+### Ryu Tamura
+### Akina Ohira
+### Hyongguk Hong
+### Miku Sano
 
 
 
