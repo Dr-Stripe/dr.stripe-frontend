@@ -6,10 +6,19 @@
 
 
 # 👨‍⚕️Dr.Stripe👩‍⚕️
-**NOTE:** This is the frontend repository of this app. For the backend, please go to https://github.com/ryutamura/dr.stripe-backend
 
+#### This was developed during my time as a student at Code Chrysalis. 
+
+**NOTE:** This is the frontend repository of this app. For the backend, please go to https://github.com/ryutamura/dr.stripe-backend
+ 
 ### Summary  
 This app will let patients pay their medical bills and charge it to the hospital / doctor without waiting to pay. 
+
+The image of our app:
+
+![Image of app]
+(https://i.ibb.co/KWqCsyy/2020-09-25-12-29-21.png)
+
 
 ### Architecture  
 picture
