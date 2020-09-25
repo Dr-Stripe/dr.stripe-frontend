@@ -10,7 +10,9 @@ function App({ setIsDoctor }) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="/healthcare.png" className="header_img" />
+        <div className="header_img">
+          <img src="/healthcare.png" />
+        </div>
         <h1 className="welcome">Welcome to Dr.stripe</h1>
       </header>
       <div className="btn_container">
@@ -29,9 +31,13 @@ function App({ setIsDoctor }) {
             setIsDoctor("Patient");
           }}
         >
-          <p>Patient</p>
           <img src="/doctor.png" className="btnlogo" />
+          <p>Patient</p>
         </button>
+        <p className="sign_in">
+          Don't you have a account yet? <br />
+          Please <a href="">Sign in.</a>
+        </p>
       </div>
     </div>
   );

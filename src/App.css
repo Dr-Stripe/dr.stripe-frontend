@@ -14,6 +14,9 @@
     transform: rotate(360deg);
   }
 }
+#root {
+  margin: 0;
+}
 
 .paiedList {
   border: 1px solid gray;
@@ -22,8 +25,15 @@
 body {
   background: #ffb4b4;
   font-family: "Baloo Tammudu 2", cursive;
-  position: relative;
-  top: 100px;
+  /* position: relative; */
+  top: 10px;
+}
+/* footer */
+footer {
+  color: gray;
+  text-align: center;
+  background: #2a566b;
+  width: 100%;
 }
 
 /* welcome page */
@@ -31,6 +41,13 @@ body {
 .App-header {
   text-align: center;
 }
+
+.sign_in {
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+}
+
 .header_img {
   position: relative;
   left: -2px;
@@ -46,7 +63,7 @@ body {
 
 .btnPatient,
 .btnDoctor {
-  font-family: "Baloo Tammudu 2", cursive;
+  /* font-family: "Baloo Tammudu 2", cursive; */
   padding: 15px;
   color: white;
   background: #2a566b;
@@ -62,18 +79,17 @@ body {
 
 .btnDoctor:hover {
   cursor: pointer;
-  padding: 25px;
-  font-size: 30px;
+  /* font-size: 30px; */
   /* color: #2a566b; */
-  /* background-color: #fff; */
-  font-weight: bolder;
+  opacity: 0.6;
+  /* font-weight: bolder; */
 }
 
 .btnPatient:hover {
-  padding: 25px;
   cursor: pointer;
-  font-weight: bolder;
-  font-size: 30px;
+  opacity: 0.6;
+  /* font-weight: bolder; */
+  /* font-size: 30px; */
   /* color: #2a566b; */
 }
 
@@ -97,6 +113,29 @@ body {
 }
 
 /* Patient unpaid Page */
+.patinet_h1 {
+  color: #2a566b;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+
+.welcome_greeting {
+  text-align: center;
+}
+
+.header_logo_container {
+  margin: 0 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient_container p {
+  color: gray;
+  margin: 0 0 30px 0;
+}
+
 .unPaidCard {
   background: white;
   border-radius: 12px;
@@ -110,6 +149,23 @@ body {
   color: #2a566b;
   font-weight: bold;
   margin: 0;
+}
+
+.PaidCard {
+  border-radius: 12px;
+  background: #d6e0f0;
+  padding: 0 20px;
+  color: white;
+  margin: 15px;
+  box-shadow: 2px 6px 8px rgb(164, 163, 163);
+}
+
+.PaidCard p {
+  color: gray;
+}
+
+.PaidCard h1 {
+  color: #2a566b;
 }
 
 .card_hospital {
@@ -133,23 +189,49 @@ body {
 }
 
 .card_checkout:hover {
-  cursor: pointer;
-  padding: 17px;
+  opacity: 0.6;
+
+  /* padding: 17px; */
 }
 
 /* button component */
+.components_box {
+  display: flex;
+  justify-content: center;
+}
 
 .component_btn {
   border: none;
-  background: gray;
+  background: #2a566b;
   color: white;
   padding: 15px;
-  border-radius: 6px;
+  border-radius: 8px;
   margin: 0 8px;
+  box-shadow: 1px 3px 4px gray;
+}
+
+.unpaind_btn {
+  border: none;
+  background: white;
+  color: #2a566b;
+  font-weight: bold;
+  padding: 18px;
+  border-radius: 8px;
+  margin: 0 8px;
+  box-shadow: 1px 3px 4px gray;
+}
+.unpaind_btn:hover {
+  cursor: pointer;
 }
 
 .component_btn:hover {
   cursor: pointer;
+  opacity: 0.7;
+}
+.paid_btn_components_img {
+  position: relative;
+  left: -6px;
+  top: 3px;
 }
 
 /* .paiedList */
@@ -161,7 +243,6 @@ body {
 
 /* payment */
 .payment_btn {
-  font-family: "Baloo Tammudu 2", cursive;
   padding: 12px 30px;
   color: white;
   background: #2a566b;
