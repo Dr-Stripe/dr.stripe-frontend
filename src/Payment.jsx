@@ -75,16 +75,20 @@ export default function Payment({ paymentData, setPaidView }) {
         </CardCvcElement>
         <button
           onClick={async () => {
-            await axios
+            const stripe = await stripePromise;
+            const response = await axios
               .post(
                 "https://cc14doctorstripe-app.herokuapp.com/create-session",
                 {
                   paymentData: { paymentData },
                 }
-              )
-              .then((result) => {
-                console.log(result);
-              });
+              ).then(async()=>{
+                const session = await response.json();
+                // When the customer clicks on the button, redirect them to Checkout.
+                const result = await stripe.redirectToCheckout({
+                  sessionId: session.id,
+                })
+              })
 
             const proxyurl = "https://cors-anywhere.herokuapp.com/";
             await axios.patch(
@@ -111,3 +115,4 @@ export default function Payment({ paymentData, setPaidView }) {
     </div>
   );
 }
+
