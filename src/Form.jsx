@@ -47,7 +47,7 @@ export default function Form({ setDocview }) {
           <p className="label">
             <label>
               <p className="inLabel">Symptoms</p>
-              <input name="symptoms" placeholder="Symptoms"></input>
+              <textarea name="symptoms" placeholder="Symptoms" />
             </label>
             <br />
             <label>
