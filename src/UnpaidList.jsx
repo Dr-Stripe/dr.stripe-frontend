@@ -29,13 +29,15 @@ export default function UnpaidList({
                   <img className="card_logo" src="time.png" width="40px" />
                   {visit.visit_date.slice(0, 10)}
                 </div>
-                <div>
+                <div className="card_treatment_container">
                   <img className="card_logo" src="aid.png" width="40px" />
                   {visit.treatment}
                 </div>
                 <div className="card_hospital">
                   <img className="card_logo" src="/location.png" width="35px" />
-                  {visit.hospital_name}
+                  <a href="https://goo.gl/maps/CtmBm7XPWkzNEPAJ8">
+                    {visit.hospital_name}
+                  </a>
                 </div>
                 <button
                   className="card_checkout"

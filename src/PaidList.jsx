@@ -20,10 +20,14 @@ export default function PaindList({ setView, data }) {
                 </h1>
                 <p>
                   {/* <img src="t /> */}
-                  {ele.visit_date}
+                  {ele.visit_date.slice(0, 10)}
                 </p>
                 <p>{ele.treatment}</p>
-                <p>{ele.hospital_name}</p>
+                <p>
+                  <a href="https://goo.gl/maps/CtmBm7XPWkzNEPAJ8">
+                    {ele.hospital_name}
+                  </a>
+                </p>
               </div>
             </>
           );
